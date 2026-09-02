@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Torn FF Target Finder
 // @namespace    https://github.com/xlemmingx/torn-ff-target-finder
-// @version      1.0.0
+// @version      1.0.1
 // @description  Finds inactive, attackable targets in your fair-fight range via the FFScouter API and verifies them against the Torn API in the background. One click = next attackable target. Works in Tampermonkey and Torn PDA.
 // @author       xlemmingx [2035104]
 // @downloadURL  https://raw.githubusercontent.com/xlemmingx/torn-ff-target-finder/master/torn-ff-target-finder.user.js
@@ -486,8 +486,6 @@
                 <div><label>Inactive ≥ (days)</label><input type="number" id="p-inact" value="${config.inactiveDays}"></div>
                 <div><label>Ready buffer</label><input type="number" id="p-ready" value="${config.desiredReady}"></div>
             </div>
-            <label>Check interval (ms) — 3000≈20/min</label>
-            <input type="number" id="p-tick" value="${config.tickMs}">
             <div class="chk"><input type="checkbox" id="p-newtab" ${config.openInNewTab ? 'checked' : ''}><label style="margin:0;color:#ddd;">Open attack in new tab</label></div>
             <div class="chk"><input type="checkbox" id="p-bg" ${config.backgroundOn ? 'checked' : ''}><label style="margin:0;color:#ddd;">Background worker active</label></div>
             <div class="actions">
@@ -515,7 +513,6 @@
             config.maxLevel = parseInt(elPanel.querySelector('#p-maxlvl').value) || 0;
             config.inactiveDays = parseFloat(elPanel.querySelector('#p-inact').value) || 0;
             config.desiredReady = parseInt(elPanel.querySelector('#p-ready').value) || 8;
-            config.tickMs = Math.max(1000, parseInt(elPanel.querySelector('#p-tick').value) || 3000);
             config.openInNewTab = elPanel.querySelector('#p-newtab').checked;
             config.backgroundOn = elPanel.querySelector('#p-bg').checked;
             saveConfig(config);
