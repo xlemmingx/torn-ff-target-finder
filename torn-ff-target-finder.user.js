@@ -4,6 +4,8 @@
 // @version      1.0.0
 // @description  Finds inactive, attackable targets in your fair-fight range via the FFScouter API and verifies them against the Torn API in the background. One click = next attackable target. Works in Tampermonkey and Torn PDA.
 // @author       xlemmingx [2035104]
+// @downloadURL  https://raw.githubusercontent.com/xlemmingx/torn-ff-target-finder/master/torn-ff-target-finder.user.js
+// @updateURL    https://raw.githubusercontent.com/xlemmingx/torn-ff-target-finder/master/torn-ff-target-finder.user.js
 // @match        *://*.torn.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
