@@ -1,0 +1,29 @@
+# HTML files (examples, test files)
+*.html
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Reference material / WSL markers
+openapi.json
+*:Zone.Identifier
+API Documentation*
